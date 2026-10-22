@@ -1,76 +1,73 @@
 # Workforce Pulse — HR Analytics Dashboard
 
-Workforce Pulse is a Python and Streamlit HR analytics dashboard connected to a MySQL database. It helps users explore workforce information through key performance indicators (KPIs), charts, filters, and an employee directory.
+**A live, read-only HR analytics dashboard built with Python, Streamlit, and MySQL.**
 
+## Overview
+
+Workforce Pulse is an HR analytics project that presents employee information and workforce metrics through an interactive web dashboard. It connects to a MySQL database hosted on Aiven and allows users to explore workforce data through KPIs, charts, and visual summaries.
+
+## Live Demo
+
+[[Open Workforce Pulse](https://workforce-pulse-jf7mdeifddaoudctxawezn.streamlit.app)
+](https://workforce-pulse-jf7mdeifddauodctxawezn.streamlit.app/)
 ## Features
 
-- Workforce KPIs, including employee counts and employment-status summaries
-- Employee analysis by department and location
-- Hiring and resignation trend visualizations
-- Interactive dashboard filters
-- Employee directory with selected employee details
-- Read-only public dashboard: visitors cannot add employees, change departments, or record resignations
+- **HR analytics dashboard:** View employee-related information and workforce metrics.
+- **KPI cards:** Review key workforce indicators.
+- **Data visualizations:** Explore workforce data using charts and graphs.
+- **MySQL integration:** Retrieve data from a hosted MySQL database.
+- **Cloud deployment:** Access the dashboard through Streamlit Community Cloud.
+- **Read-only public access:** Dashboard visitors can view analytics without using employee-management actions.
 
 ## Technology Stack
 
-- Python
-- Streamlit
-- Pandas
-- MySQL
-- mysql-connector-python
+- **Programming language:** Python
+- **Dashboard framework:** Streamlit
+- **Data manipulation:** Pandas
+- **Database:** MySQL
+- **Database hosting:** Aiven
+- **Deployment:** Streamlit Community Cloud
+- **Version control:** Git and GitHub
+
+## Architecture
+
+MySQL Database (Aiven) → Python and MySQL Connector → Streamlit Dashboard → Public Viewer
 
 ## Project Structure
 
 ```text
-workforce-pulse/
+Workforce_Pulse/
 ├── workforce_pulse_public.py
 ├── requirements.txt
 └── README.md
 ```
 
-## Running Locally
+## Run Locally
 
-1. Install Python.
-2. Clone this repository and open its folder.
-3. Create and activate a virtual environment (recommended).
-4. Install the dependencies:
+1. Clone this repository.
+2. Install the dependencies.
+3. Configure the database credentials securely using Streamlit Secrets.
+4. Start the application.
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+git clone https://github.com/harshit1017kaushik-create/Workforce_Pulse.git
+cd Workforce_Pulse
+pip install -r requirements.txt
+streamlit run workforce_pulse_public.py
+```
 
-5. Configure the database connection using environment variables or Streamlit secrets. Do not put database passwords directly in source code or commit them to GitHub.
-6. Start the app:
+Configure the required `[mysql]` settings in `.streamlit/secrets.toml` before running the app locally. Never commit database passwords or other secrets to GitHub.
 
-   ```bash
-   streamlit run workforce_pulse_public.py
-   ```
+## Learning Outcomes
 
-The dashboard requires a reachable MySQL database with the expected `employees` table. If the app also queries event data, the database must contain the expected `employee_events` table. A database running on your own computer (`localhost`) is not automatically accessible to a cloud-hosted app.
-
-## Deployment
-
-This repository can be deployed using Streamlit Community Cloud or another compatible hosting platform.
-
-Before deployment:
-
-- Configure the database connection securely in the hosting platform's secrets/settings.
-- Use a hosted MySQL database that the app can securely reach.
-- Confirm the app uses read-only database permissions where possible.
-- Use fictional or appropriately anonymized employee data for a public portfolio demo.
-- Review the employee directory and remove any information that should not be public.
-- Never commit passwords, API keys, database dumps, or real employee records to a public repository.
-
-## Access and Data Safety
-
-This public version is intended for viewing and exploration only. It does not provide public forms for hiring, department changes, or resignation records. The database credentials must be kept private, and the database account used by the public dashboard should have only the permissions it needs to read dashboard data.
-
-## Project Status
-
-Deployment and database connectivity must be configured and tested for the target hosting environment. The README describes the intended setup; it does not claim that the hosted app is already live.
+- Connecting a Python application to a MySQL database.
+- Building a dashboard with Streamlit.
+- Presenting employee data through KPIs and visualizations.
+- Deploying a Python application to the cloud.
+- Separating public dashboard access from employee-management actions.
 
 ## Author
 
-Harshit Kaushik
+**Harshit Kaushik**
 
-GitHub: https://github.com/harshit1017kaushik-create
+Computer Science and Engineering | Data Analytics Projects
