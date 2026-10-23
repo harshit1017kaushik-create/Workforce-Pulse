@@ -6,10 +6,13 @@
 
 Workforce Pulse is an HR analytics project that presents employee information and workforce metrics through an interactive web dashboard. It connects to a MySQL database hosted on Aiven and allows users to explore workforce data through KPIs, charts, and visual summaries.
 
-## Live Demo
+## 🚀 Live Demo
 
-[[Open Workforce Pulse](https://workforce-pulse-jf7mdeifddaoudctxawezn.streamlit.app)
-](https://workforce-pulse-jf7mdeifddauodctxawezn.streamlit.app/)
+- **Public Dashboard:** https://workforce-pulse-jf7mdeifddauodctxawezn.streamlit.app/
+- **Admin Dashboard:** https://workforce-pulse-pnhjzxcqbhykumawyqhkxd.streamlit.app/
+
+> **Note:** The Admin Dashboard is intended for authorized administration. Login credentials are required.
+
 ## Features
 
 - **HR analytics dashboard:** View employee-related information and workforce metrics.
